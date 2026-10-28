@@ -1,10 +1,18 @@
+"""Точка входа приложения управления роботом IoTRobotWorld."""
+import sys
 
-from robot import Robot
-from udp import UDPConnection
+from PyQt6.QtWidgets import QApplication
 
-def main():
+from gui import MainWindow
 
-    return
+
+def main() -> int:
+    app = QApplication(sys.argv)
+    app.setApplicationName("IoTRobotWorld Controller")
+    window = MainWindow()
+    window.show()
+    return app.exec()
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
